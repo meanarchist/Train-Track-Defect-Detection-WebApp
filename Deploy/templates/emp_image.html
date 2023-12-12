@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>IMAGE UPLOAD</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      .image-container {
+        @apply relative overflow-hidden;
+        width: 300px; /* Adjust the width as needed */
+        height: 200px; /* Adjust the height as needed */
+      }
+  
+      .image-container img {
+        @apply w-full h-full block object-cover transition-transform ease-in-out;
+      }
+  
+      .overlay {
+        @apply absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-lg opacity-0 transition-opacity ease-in-out;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
+      }
+  
+      .image-container:hover .overlay {
+        @apply opacity-100;
+      }
+      </style>
+</head>
+
+
+<body>
+  <div class="py-4 pl-20 flex items-center">
+    <figure>
+      <img src="../media/images/webapp_icon.png" alt="Logo" class="rounded-full" height="50" width="100">
+    </figure>
+    <h1 class="px-5 font-bold text-xl text-blue-400">TrackVigilance</h1>
+  </div>
+  <div class="flex justify-center items-center bg-gradient-to-l from-indigo-500 to-blue-800 p-10">
+  <div class=" w-1/2  text-blue-400 flex justify-center items-center text-4xl pr-20">
+    <div class="backdrop-blur-sm bg-white/20 text-white p-10 border rounded-lg border-gray-100 font-semibold">Train Track Defect Prediction</div>
+  </div>
+  <div >
+      <div >
+    <form class="flex justify-center" method = "post" enctype="multipart/form-data"> 
+       <div class="block w-100 mx-auto text-center lowercase py-4 capitalize font-medium text-gray-100">
+        <div>{% csrf_token %} </div>
+        <div class="capitalize block p-10 outline-dashed outline-2">{{ form.as_p }} </div>
+        <br />
+        <button class="backdrop-blur-sm bg-white/30 text-white rounded-lg px-60 py-2 shadow-lg hover:scale-110 w-100" type="submit">Upload</button>
+       </div>
+    </form>
+      </div>
+  </div>  
+</div>
+</div>
+<div class="py-5">
+  <h1 class="flex justify-center items-center font-semibold text-2xl">How it Works???</h1>
+  <div class="flex justify-center items-center ">
+    <div class="w-1/2 text-center pr-14 text-lg">
+      TrackVigilance employs a robust Convolutional Neural Network (CNN) meticulously designed for railway track defect detection. With intricate layers of image analysis, it ensures precise identification, contributing to the reliability and safety of rail infrastructure. Experience superior performance and innovation in railway track maintenance with TrackVigilance's advanced model.
+    </div>
+    <figure>
+      <img src="../media/images/code1.png" alt="Model" height="500" width="500" class="rounded-lg" >
+    </figure>
+  </div>
+  <div class="flex justify-center items-center py-10">
+    <figure>
+      <img src="../media/images/arch.png" alt="Architecture" height="500" width="500" class="rounded-lg" >
+    </figure>
+    <div class="w-1/2 text-center pl-14 text-lg">
+      Explore the depths of cutting-edge technology with TrackVigilance, a graduate student's endeavor in neural network excellence. Our model boasts 1.2 million parameters, leveraging convolutional layers for unparalleled defect detection. Witness the future of machine learning innovation as we redefine the landscape of image analysis and rail infrastructure reliability
+    </div>
+  </div>
+</div>
+<div class="text-white bg-gradient-to-l from-indigo-500 to-blue-800 p-10">
+  <h1 class="flex justify-center items-center font-bold text-3xl">Team</h1>
+  <div class="flex justify-center items-center">
+    <div class="text-center px-20">
+      <figure class="flex justify-center rounded-xl">
+        <img src="../media/images/tharun.JPG" alt="Tharun" height="100" width="100" class=" py-4">
+      </figure>
+      <h1 class="text-lg">Tharun Jayaprakash</h1>
+      <h2>tj2557</h2>
+    </div>
+    <div class="text-center px-20">
+      <figure class="flex justify-center rounded-xl">
+        <img src="../media/images/rashmi.jpg" alt="Rashmi" height="100" width="100" class=" py-4">
+      </figure>
+      <h1 class="text-lg">Rashmi Chelliah</h1>
+      <h2>rc3605</h2>
+    </div>
+    <div class="text-center px-20">
+      <figure class="flex justify-center rounded-xl">
+        <img src="../media/images/anxin.JPEG" alt="Anxin" height="100" width="100" class=" py-4">
+      </figure>
+      <h1 class="text-lg">Anxin Yi</h1>
+      <h2>ay2616</h2>
+    </div>
+  </div>
+</div>
+</body> 
+</html> 

@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TRAIN TRACK CRACK PREDICTION OUTPUT RESULT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-l from-indigo-500 to-blue-800 px-32 text-white">
+<div class="flex flex-col justify-center items-center backdrop-blur-sm bg-white/30 rounded-xl border border-white my-12 py-56">
+  <h2 class="text-4xl uppercase py-8 px-10 border-b-2 border-b-white my-10">Result</h2>
+ <h1 class="bg-indigo-500 text-5xl px-4 py-2 rounded-xl">{{out}}</h1>
+<h3 class="bg-transparent border-2 hover:bg-indigo-500 border-white hover:border-indigo-500 my-10 px-4 py-2 rounded-xl shadow-xl"><a href="{% url 'home' %}">Home Page</a></h3>
+</div>
+</body>
+</html>
